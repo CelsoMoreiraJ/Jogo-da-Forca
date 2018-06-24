@@ -1,0 +1,710 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>JOGO DA FORCA</title>
+		<meta charset="utf-8">
+		<style type="text/css">
+			#container{
+				position: relative;
+			}
+			#imgFundo{
+				position: absolute;
+			}
+			#imgForca{
+				position: absolute;
+				top: 115px;
+				left: -35px;
+			}
+			#Letras{
+				width: 200px;
+				height: 150px;
+			}
+
+			#dvplavra{
+				margin-left: -40px;
+			}
+
+			#l0{
+				top:400px;
+				width: 30px;
+				margin-left: 50px;
+                font-size: 30px;
+                text-transform: uppercase;
+                text-align: center;
+                border: none;
+                border-bottom: 1px solid black;
+                position: absolute;
+            }
+            #l1{
+				top:400px;
+				width: 30px;
+				margin-left: 90px;
+                font-size: 30px;
+                text-transform: uppercase;
+                text-align: center;
+                border: none;
+                border-bottom: 1px solid black;
+                position: absolute;
+            }
+            #l2{
+				top:400px;
+				width: 30px;
+				margin-left: 130px;
+                font-size: 30px;
+                text-transform: uppercase;
+                text-align: center;
+                border: none;
+                border-bottom: 1px solid black;
+                position: absolute;
+            }
+            #l3{
+				top:400px;
+				width: 30px;
+				margin-left: 170px;
+                font-size: 30px;
+                text-transform: uppercase;
+                text-align: center;
+                border: none;
+                border-bottom: 1px solid black;
+                position: absolute;
+            }
+            #l4{
+				top:400px;
+				width: 30px;
+				margin-left: 210px;
+                font-size: 30px;
+                text-transform: uppercase;
+                text-align: center;
+                border: none;
+                border-bottom: 1px solid black;
+                position: absolute;
+            }
+            #l5{
+				top:400px;
+				width: 30px;
+				margin-left: 250px;
+                font-size: 30px;
+                text-transform: uppercase;
+                text-align: center;
+                border: none;
+                border-bottom: 1px solid black;
+                position: absolute;
+            }
+            #l6{
+				top:400px;
+				width: 30px;
+				margin-left: 290px;
+                font-size: 30px;
+                text-transform: uppercase;
+                text-align: center;
+                border: none;
+                border-bottom: 1px solid black;
+                position: absolute;
+            }
+            #l7{
+				top:400px;
+				width: 30px;
+				margin-left: 330px;
+                font-size: 30px;
+                text-transform: uppercase;
+                text-align: center;
+                border: none;
+                border-bottom: 1px solid black;
+                position: absolute;
+            }
+            #l8{
+				top:400px;
+				width: 30px;
+				margin-left: 370px;
+                font-size: 30px;
+                text-transform: uppercase;
+                text-align: center;
+                border: none;
+                border-bottom: 1px solid black;
+                position: absolute;
+            }
+            #l9{
+				top:400px;
+				width: 30px;
+				margin-left: 410px;
+                font-size: 30px;
+                text-transform: uppercase;
+                text-align: center;
+                border: none;
+                border-bottom: 1px solid black;
+                position: absolute;
+            }
+            #l10{
+				top:400px;
+				width: 30px;
+				margin-left: 460px;
+                font-size: 30px;
+                text-transform: uppercase;
+                text-align: center;
+                border: none;
+                border-bottom: 1px solid black;
+                position: absolute;
+            }
+            #l11{
+				top:400px;
+				width: 30px;
+				margin-left: 500px;
+                font-size: 30px;
+                text-transform: uppercase;
+                text-align: center;
+                border: none;
+                border-bottom: 1px solid black;
+                position: absolute;
+            }
+
+			.LA{
+				border-width: 2px;
+				border-style: outset;
+				border-color: initial;
+				font-weight: bold;
+				font-size: 20px;
+				background: white;
+				width: 32px;
+				color: black;
+				font-family: verdana;
+				height: 32px;
+				text-align: center;
+				position: absolute;
+				top: 530px;
+				left: 15px;
+			}
+			.LB{
+				border-width: 2px;
+				border-style: outset;
+				border-color: initial;
+				font-weight: bold;
+				font-size: 20px;
+				background: white;
+				width: 32px;
+				color: black;
+				font-family: verdana;
+				height: 32px;
+				text-align: center;
+				position: absolute;
+				top: 530px;
+				left: 60px;
+			}
+			.LC{
+				border-width: 2px;
+				border-style: outset;
+				border-color: initial;
+				font-weight: bold;
+				font-size: 20px;
+				background: white;
+				width: 32px;
+				color: black;
+				font-family: verdana;
+				height: 32px;
+				text-align: center;
+				position: absolute;
+				top: 530px;
+				left: 105px;
+			}
+			.LD{
+				border-width: 2px;
+				border-style: outset;
+				border-color: initial;
+				font-weight: bold;
+				font-size: 20px;
+				background: white;
+				width: 32px;
+				color: black;
+				font-family: verdana;
+				height: 32px;
+				text-align: center;
+				position: absolute;
+				top: 530px;
+				left: 145px;
+			}
+			.LE{
+				border-width: 2px;
+				border-style: outset;
+				border-color: initial;
+				font-weight: bold;
+				font-size: 20px;
+				background: white;
+				width: 32px;
+				color: black;
+				font-family: verdana;
+				height: 32px;
+				text-align: center;
+				position: absolute;
+				top: 530px;
+				left: 185px;
+			}
+			.LF{
+				border-width: 2px;
+				border-style: outset;
+				border-color: initial;
+				font-weight: bold;
+				font-size: 20px;
+				background: white;
+				width: 32px;
+				color: black;
+				font-family: verdana;
+				height: 32px;
+				text-align: center;
+				position: absolute;
+				top: 530px;
+				left: 227px;
+			}
+			.LG{
+				border-width: 2px;
+				border-style: outset;
+				border-color: initial;
+				font-weight: bold;
+				font-size: 20px;
+				background: white;
+				width: 32px;
+				color: black;
+				font-family: verdana;
+				height: 32px;
+				text-align: center;
+				position: absolute;
+				top: 530px;
+				left: 265px;
+			}
+			.LH{
+				border-width: 2px;
+				border-style: outset;
+				border-color: initial;
+				font-weight: bold;
+				font-size: 20px;
+				background: white;
+				width: 32px;
+				color: black;
+				font-family: verdana;
+				height: 32px;
+				text-align: center;
+				position: absolute;
+				top: 530px;
+				left: 305px;
+			}
+			.LI{
+				border-width: 2px;
+				border-style: outset;
+				border-color: initial;
+				font-weight: bold;
+				font-size: 20px;
+				background: white;
+				width: 32px;
+				color: black;
+				font-family: verdana;
+				height: 32px;
+				text-align: center;
+				position: absolute;
+				top: 530px;
+				left: 345px;
+			}
+			.LJ{
+				border-width: 2px;
+				border-style: outset;
+				border-color: initial;
+				font-weight: bold;
+				font-size: 20px;
+				background: white;
+				width: 32px;
+				color: black;
+				font-family: verdana;
+				height: 32px;
+				text-align: center;
+				position: absolute;
+				top: 530px;
+				left: 385px;
+			}
+			.LK{
+				border-width: 2px;
+				border-style: outset;
+				border-color: initial;
+				font-weight: bold;
+				font-size: 20px;
+				background: white;
+				width: 32px;
+				color: black;
+				font-family: verdana;
+				height: 32px;
+				text-align: center;
+				position: absolute;
+				top: 530px;
+				left: 425px;
+			}
+			.L{
+				border-width: 2px;
+				border-style: outset;
+				border-color: initial;
+				font-weight: bold;
+				font-size: 20px;
+				background: white;
+				width: 32px;
+				color: black;
+				font-family: verdana;
+				height: 32px;
+				text-align: center;
+				position: absolute;
+				top: 530px;
+				left: 465px;
+			}
+			.LM{
+				border-width: 2px;
+				border-style: outset;
+				border-color: initial;
+				font-weight: bold;
+				font-size: 20px;
+				background: white;
+				width: 32px;
+				color: black;
+				font-family: verdana;
+				height: 32px;
+				text-align: center;
+				position: absolute;
+				top: 570px;
+				left: 25px;
+			}
+			.LN{
+				border-width: 2px;
+				border-style: outset;
+				border-color: initial;
+				font-weight: bold;
+				font-size: 20px;
+				background: white;
+				width: 32px;
+				color: black;
+				font-family: verdana;
+				height: 32px;
+				text-align: center;
+				position: absolute;
+				top: 570px;
+				left: 65px;
+			}
+			.LO{
+				border-width: 2px;
+				border-style: outset;
+				border-color: initial;
+				font-weight: bold;
+				font-size: 20px;
+				background: white;
+				width: 32px;
+				color: black;
+				font-family: verdana;
+				height: 32px;
+				text-align: center;
+				position: absolute;
+				top: 570px;
+				left: 105px;
+			}
+			.LP{
+				border-width: 2px;
+				border-style: outset;
+				border-color: initial;
+				font-weight: bold;
+				font-size: 20px;
+				background: white;
+				width: 32px;
+				color: black;
+				font-family: verdana;
+				height: 32px;
+				text-align: center;
+				position: absolute;
+				top: 570px;
+				left: 145px;
+			}
+			.LQ{
+				border-width: 2px;
+				border-style: outset;
+				border-color: initial;
+				font-weight: bold;
+				font-size: 20px;
+				background: white;
+				width: 32px;
+				color: black;
+				font-family: verdana;
+				height: 32px;
+				text-align: center;
+				position: absolute;
+				top: 570px;
+				left: 185px;
+			}
+			.LR{
+				border-width: 2px;
+				border-style: outset;
+				border-color: initial;
+				font-weight: bold;
+				font-size: 20px;
+				background: white;
+				width: 32px;
+				color: black;
+				font-family: verdana;
+				height: 32px;
+				text-align: center;
+				position: absolute;
+				top: 570px;
+				left: 225px;
+			}
+			.LS{
+				border-width: 2px;
+				border-style: outset;
+				border-color: initial;
+				font-weight: bold;
+				font-size: 20px;
+				background: white;
+				width: 32px;
+				color: black;
+				font-family: verdana;
+				height: 32px;
+				text-align: center;
+				position: absolute;
+				top: 570px;
+				left: 265px;
+			}
+			.LT{
+				border-width: 2px;
+				border-style: outset;
+				border-color: initial;
+				font-weight: bold;
+				font-size: 20px;
+				background: white;
+				width: 32px;
+				color: black;
+				font-family: verdana;
+				height: 32px;
+				text-align: center;
+				position: absolute;
+				top: 570px;
+				left: 305px;
+			}
+			.LU{
+				border-width: 2px;
+				border-style: outset;
+				border-color: initial;
+				font-weight: bold;
+				font-size: 20px;
+				background: white;
+				width: 32px;
+				color: black;
+				font-family: verdana;
+				height: 32px;
+				text-align: center;
+				position: absolute;
+				top: 570px;
+				left: 345px;
+			}
+			.LV{
+				border-width: 2px;
+				border-style: outset;
+				border-color: initial;
+				font-weight: bold;
+				font-size: 20px;
+				background: white;
+				width: 32px;
+				color: black;
+				font-family: verdana;
+				height: 32px;
+				text-align: center;
+				position: absolute;
+				top: 570px;
+				left: 385px;
+			}
+			.LW{
+				border-width: 2px;
+				border-style: outset;
+				border-color: initial;
+				font-weight: bold;
+				font-size: 20px;
+				background: white;
+				width: 32px;
+				color: black;
+				font-family: verdana;
+				height: 32px;
+				text-align: center;
+				position: absolute;
+				top: 570px;
+				left: 425px;
+			}
+			.LX{
+				border-width: 2px;
+				border-style: outset;
+				border-color: initial;
+				font-weight: bold;
+				font-size: 20px;
+				background: white;
+				width: 32px;
+				color: black;
+				font-family: verdana;
+				height: 32px;
+				text-align: center;
+				position: absolute;
+				top: 610px;
+				left: 180px;
+			}
+			.LY{
+				border-width: 2px;
+				border-style: outset;
+				border-color: initial;
+				font-weight: bold;
+				font-size: 20px;
+				background: white;
+				width: 32px;
+				color: black;
+				font-family: verdana;
+				height: 32px;
+				text-align: center;
+				position: absolute;
+				top: 610px;
+				left: 220px;
+			}
+			.LZ{
+				border-width: 2px;
+				border-style: outset;
+				border-color: initial;
+				font-weight: bold;
+				font-size: 20px;
+				background: white;
+				width: 32px;
+				color: black;
+				font-family: verdana;
+				height: 32px;
+				text-align: center;
+				position: absolute;
+				top: 610px;
+				left: 260px;
+			}
+
+			#Texto{
+				position: absolute;
+				left: 100px;
+				top: 35px;
+				text-align: justify;
+				font-family: tahoma;
+			}
+
+			#T{
+			border: 1px;
+			}
+
+			#btcomecar{
+				border-width: 2px; 
+				border-style: outset; 
+				border-color: initial; 
+				font-weight: bold; 
+				font-size: 20px; 
+				background: white; 
+				color: black; 
+				font-family: verdana; 
+				height: 32px; 
+				text-align: center;
+				top: 450px;
+				left: 350px;
+				position: absolute;
+				cursor: pointer;
+			}
+
+			#pt{
+				border-top-width: 0px; 
+				border-left-width: 0px; 
+				font-size: 18px;
+				background: none transparent scroll repeat 0% 0%;
+				border-bottom-width: 0px;
+				width: 25px;
+				color: black;
+				font-family: verdana;
+				height: 25px;
+				text-align: center;
+				border-right-width: 0px;
+				position: absolute;
+				top:-5px;
+			}
+
+			#Err{
+				border-top-width: 0px;
+				border-left-width: 0px;
+				font-size: 18px;
+				background: none transparent scroll repeat 0% 0%;
+				border-bottom-width: 0px;
+				width: 25px;
+				color: black;
+				font-family: verdana;
+				height: 25px;
+				text-align: center;
+				border-right-width: 0px;
+				position: absolute;
+				top:-5px;
+			}
+
+			#pt-err{
+				top:680px; 
+				position: absolute;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="container">
+			<div id="imgFundo">
+				<img src="F:\Faculdade\2° Periodo\Trabalhos\Oficial\imagens/background.png">
+				<label><h1 id="Texto">JOGO DA FORCA</h1></label>
+				<div id="imgForca"><label><img width="400px" src="C:\Users\user\Desktop\Jogo da Forca\img/Forca.png"></label></div>
+				<div id="dvplavra" class="dvdisplay">
+                        <input type="text" id="l0" class="l" maxlength="1">
+                        <input type="text" id="l1" class="l" maxlength="1">
+                        <input type="text" id="l2" class="l" maxlength="1">
+                        <input type="text" id="l3" class="l" maxlength="1">
+                        <input type="text" id="l4" class="l" maxlength="1">
+                        <input type="text" id="l5" class="l" maxlength="1">
+                        <input type="text" id="l6" class="l" maxlength="1">
+                        <input type="text" id="l7" class="l" maxlength="1">
+                        <input type="text" id="l8" class="l" maxlength="1">
+                        <input type="text" id="l9" class="l" maxlength="1">
+                        <input type="text" id="l10" class="l" maxlength="1">
+                        <input type="text" id="l11" class="l" maxlength="1">
+                    </div>
+				<div id="Letras"><label><table cellspacing="5">
+				<tr>
+					<td><div class="LA"><input onmouseover="this.style.background='black';this.style.color='white'" onclick="seek('A');" onmouseout="this.style.background='white';this.style.color='black'" type="button" value="A" name="BUTTON2"></div></td>
+					<td><div class="LB"><input onmouseover="this.style.background='black';this.style.color='white'" onclick="seek('B');" onmouseout="this.style.background='white';this.style.color='black'" type="button" value="B" name="BUTTON3"></div></td>
+					<td><div class="LC"><input onmouseover="this.style.background='black';this.style.color='white'" onclick="seek('C');" onmouseout="this.style.background='white';this.style.color='black'" type="button" value="C" name="BUTTON4"></div></td>
+					<td><div class="LD"><input onmouseover="this.style.background='black';this.style.color='white'" onclick="seek('D');" onmouseout="this.style.background='white';this.style.color='black'" type="button" value="D" name="BUTTON5"></div></td>
+					<td><div class="LE"><input onmouseover="this.style.background='black';this.style.color='white'" onclick="seek('E');" onmouseout="this.style.background='white';this.style.color='black'" type="button" value="E" name="BUTTON6"></div></td>
+					<td><div class="LF"><input onmouseover="this.style.background='black';this.style.color='white'" onclick="seek('F');" onmouseout="this.style.background='white';this.style.color='black'" type="button" value="F" name="BUTTON7"></div></td>
+					<td><div class="LG"><input onmouseover="this.style.background='black';this.style.color='white'" onclick="seek('G');" onmouseout="this.style.background='white';this.style.color='black'" type="button" value="G" name="BUTTON8"></div></td>
+					<td><div class="LH"><input onmouseover="this.style.background='black';this.style.color='white'" onclick="seek('H');" onmouseout="this.style.background='white';this.style.color='black'" type="button" value="H" name="BUTTON9"></div></td>
+					<td><div class="LI"><input onmouseover="this.style.background='black';this.style.color='white'" onclick="seek('I');" onmouseout="this.style.background='white';this.style.color='black'" type="button" value="I" name="BUTTON10"></div></td>
+					<td><div class="LJ"><input onmouseover="this.style.background='black';this.style.color='white'" onclick="seek('J');" onmouseout="this.style.background='white';this.style.color='black'" type="button" value="J" name="BUTTON11"></div></td>
+					<td><div class="LK"><input onmouseover="this.style.background='black';this.style.color='white'" onclick="seek('K');" onmouseout="this.style.background='white';this.style.color='black'" type="button" value="K" name="BUTTON12"></div></td>
+					<td><div class="L"><input onmouseover="this.style.background='black';this.style.color='white'" onclick="seek('L');" onmouseout="this.style.background='white';this.style.color='black'" type="button" value="L" name="BUTTON13"></div></td>
+				</tr>
+				<tr>
+					<td><div class="LM"><input onmouseover="this.style.background='black';this.style.color='white'" onclick="seek('M');" onmouseout="this.style.background='white';this.style.color='black'" type="button" value="M" name="BUTTON14"></div></td>
+					<td><div class="LN"><input onmouseover="this.style.background='black';this.style.color='white'" onclick="seek('N');" onmouseout="this.style.background='white';this.style.color='black'" type="button" value="N" name="BUTTON15"></div></td>
+					<td><div class="LO"><input onmouseover="this.style.background='black';this.style.color='white'" onclick="seek('O');" onmouseout="this.style.background='white';this.style.color='black'" type="button" value="O" name="BUTTON16"></div></td>
+					<td><div class="LP"><input onmouseover="this.style.background='black';this.style.color='white'" onclick="seek('P');" onmouseout="this.style.background='white';this.style.color='black'" type="button" value="P" name="BUTTON17"></div></td>
+					<td><div class="LQ"><input onmouseover="this.style.background='black';this.style.color='white'" onclick="seek('Q');" onmouseout="this.style.background='white';this.style.color='black'" type="button" value="Q" name="BUTTON18"></div></td>
+					<td><div class="LR"><input onmouseover="this.style.background='black';this.style.color='white'" onclick="seek('R');" onmouseout="this.style.background='white';this.style.color='black'" type="button" value="R" name="BUTTON19"></div></td>
+					<td><div class="LS"><input onmouseover="this.style.background='black';this.style.color='white'" onclick="seek('S');" onmouseout="this.style.background='white';this.style.color='black'" type="button" value="S" name="BUTTON20"></div></td>
+					<td><div class="LT"><input onmouseover="this.style.background='black';this.style.color='white'" onclick="seek('T');" onmouseout="this.style.background='white';this.style.color='black'" type="button" value="T" name="BUTTON21"></div></td>
+					<td><div class="LU"><input onmouseover="this.style.background='black';this.style.color='white'" onclick="seek('U');" onmouseout="this.style.background='white';this.style.color='black'" type="button" value="U" name="BUTTON22"></div></td>
+					<td><div class="LV"><input onmouseover="this.style.background='black';this.style.color='white'" onclick="seek('V');" onmouseout="this.style.background='white';this.style.color='black'" type="button" value="V" name="BUTTON23"></div></td>
+					<td><div class="LW"><input onmouseover="this.style.background='black';this.style.color='white'" onclick="seek('W');" onmouseout="this.style.background='white';this.style.color='black'" type="button" value="W" name="BUTTON24"></div></td>
+					<td><div class="LX"><input onmouseover="this.style.background='black';this.style.color='white'" onclick="seek('X');" onmouseout="this.style.background='white';this.style.color='black'" type="button" value="X" name="BUTTON25"></div></td>
+					<td><div class="LY"><input onmouseover="this.style.background='black';this.style.color='white'" onclick="seek('Y');" onmouseout="this.style.background='white';this.style.color='black'" type="button" value="Y" name="BUTTON26"></div></td>
+					<td><div class="LZ"><input onmouseover="this.style.background='black';this.style.color='white'" onclick="seek('Z');" onmouseout="this.style.background='white';this.style.color='black'" type="button" value="Z" name="BUTTON27"></div></td>
+				</tr>
+				<tr>
+					<td><b id="pt-err">PONTOS:<input id="pt" onfocus="" value="0" name="pts">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ERROS:<input id="Err" onfocus="" value="0" name="lives"></b></td>
+				</tr>
+				<tr>
+					<td><input id="btcomecar" onmouseover="" onclick="comecar();" onmouseout="" type="button" value="Começar" name="BUTTON"></td>
+				</tr>
+				</table></label></div>
+			</div>	
+		</div>
+		<script type="text/javascript" src="C:\Users\user\Desktop\Jogo da Forca/script.js">
+			
+
+
+		</script>
+	</body>
+</html>
